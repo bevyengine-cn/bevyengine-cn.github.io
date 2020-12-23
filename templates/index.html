@@ -4,22 +4,20 @@
 <div class="padded-content container">
     <img src="/assets/bevy_logo_dark.svg" class="bevy-logo-header" alt="Bevy logo"/>
     <div class="bevy-description">
-        A refreshingly simple data-driven game engine built in Rust
+        一款由Rust语言构建且简单明了的数据驱动的游戏引擎
         <br />
-        Free and Open Source Forever!
+        永远开源免费!
     </div>
     <div class="feature-list">
         <div class="feature-container">
             <div class="feature-text">
-                <h2 class="feature-title">Data Driven</h2>
+                <h2 class="feature-title">数据驱动</h2>
                 <div class="feature-description">
-                    All engine and game logic uses Bevy ECS, a custom Entity Component System
+                    所有引擎和游戏逻辑使用Bevy ECS系统
                     <ul class="feature-sublist">
-                        <li><b>Fast:</b> Massively Parallel and Cache-Friendly. The fastest ECS according to some
-                            benchmarks</li>
-                        <li><b>Simple:</b> Components are Rust structs, Systems are Rust functions</li>
-                        <li><b>Capable:</b> Queries, Global Resources, Local Resources, Change Detection, Lock-Free
-                            Parallel Scheduler</li>
+                        <li><b>快</b>: 大规模并行, 缓存友好. 根据某些基准测试最快的ECS</li>
+                        <li><b>简单</b>: 组件是Rust的结构体, 系统是Rust的函数</li>
+                        <li><b>给力</b>: 查询, 全局资源, 本地资源, 变化检测, 无锁并行调度</li>
                     </ul>
                 </div>
             </div>
@@ -33,26 +31,25 @@
                 <img src="assets/sprite.png" class="feature-img" alt="Pixel art sprite of a person"/>
             </div>
             <div class="feature-text">
-                <h2 class="feature-title">2D Renderer</h2>
+                <h2 class="feature-title">2D 渲染</h2>
                 <div class="feature-description">
-                    Render real-time 2D graphics for games and apps
+                    为游戏和应用程序渲染实时2D图形
                     <ul class="feature-sublist">
-                        <li><b>Features: </b>sprite sheets, dynamic texture atlases, cameras, textures, and materials
-                        </li>
-                        <li><b>Extensible: </b>custom shaders, materials, and render pipelines</li>
-                        <li><b>Common Core: </b>builds on top of Bevy's Render Graph</li>
+                        <li><b>功能</b>: 精灵表, 动态纹理图集, 摄像机, 纹理和材质</li>
+                        <li><b>可扩展</b>: 自定义着色器, 材质, 和渲染管道</li>
+                        <li><b>通用核心</b>: 建立在Bevy的渲染图之上</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="feature-container">
             <div class="feature-text">
-                <h2 class="feature-title">3D Renderer</h2>
-                A modern and flexible 3D renderer
+                <h2 class="feature-title">3D 渲染</h2>
+                一个现代和灵活的3D渲染器
                 <ul class="feature-sublist">
-                    <li><b>Features: </b>lights, cameras, meshes, textures, materials, gltf loading</li>
-                    <li><b>Extensible: </b>custom shaders, materials, and render pipelines</li>
-                    <li><b>Common Core: </b>built on top of Bevy's Render Graph</li>
+                    <li><b>功能</b>: 灯光, 摄像机, 网格, 纹理, 材质, gltf加载</li>
+                    <li><b>可扩展</b>: 自定义着色器, 材质, 和渲染管道</li>
+                    <li><b>通用核心</b>: 建立在Bevy的渲染图之上</li>
                 </ul>
             </div>
             <div class="feature-image">
@@ -61,27 +58,27 @@
         </div>
         <div class="feature-container feature-container-reverse">
             <div class="feature-image">
-                <img src="assets/render_graph.svg" class="feature-img" alt="Render graph"/>
+                <img src="assets/render_graph.svg" class="feature-img" alt="图形渲染"/>
             </div>
             <div class="feature-text">
-                <h2 class="feature-title">Render Graph</h2>
-                Compose custom render pipelines using a graph structure
+                <h2 class="feature-title">图形渲染</h2>
+                使用图形结构组合自定义渲染管道
                 <ul class="feature-sublist">
-                    <li><b>Parallel: </b> Render Graphs are automatically rendered in parallel</li>
-                    <li><b>Modular: </b> Build composable and reusable render logic using Render Graph nodes </li>
-                    <li><b>Backend Agnostic: </b> Not tied to a specific graphics api</li>
+                    <li><b>并行</b>: 图形渲染是自动并行渲染的</li>
+                    <li><b>模块化</b>: 使用渲染图形节点构建可组合和可重用的渲染逻辑</li>
+                    <li><b>后端不可知</b>: 不绑定到特定的图形API</li>
                 </ul>
             </div>
         </div>
         <div class="feature-container">
             <div class="feature-text">
-                <h2 class="feature-title">Cross Platform</h2>
+                <h2 class="feature-title">跨平台</h2>
                 <div class="feature-description">
-                    Support for all major desktop platforms:
+                    支持所有主要的桌面平台:
                     <ul class="feature-sublist">
                         <li>Windows, MacOS, Linux</li>
                     </ul>
-                    With more on the way:
+                    还有更多敬请期待:
                     <ul class="feature-sublist">
                         <li>Android, iOS, Web</li>
                     </ul>
@@ -97,22 +94,22 @@
             </div>
             <div class="feature-text">
                 <h2 class="feature-title">Bevy UI</h2>
-                A custom ECS-driven UI framework built specifically for Bevy
+                一个定制的ecs驱动的UI框架, 专门为Bevy构建
                 <ul class="feature-sublist">
-                    <li>Built directly on top of Bevy's ECS, Renderer, and Scene plugins</li>
-                    <li>Compose UIs dynamically in code or declaratively using the Bevy Scene format</li>
-                    <li>Use a familiar "flex box" model to layout your UIs</li>
+                    <li>直接建立在Bevy的ECS，渲染器，和场景插件之上</li>
+                    <li>使用Bevy的场景格式声明或者在代码中动态的编写</li>
+                    <li>使用熟悉的"flex box"模型来布局你的UI</li>
                 </ul>
             </div>
         </div>
         <div class="feature-container">
             <div class="feature-text">
-                <h2 class="feature-title">Scenes</h2>
-                Create, save, and load ECS worlds using Bevy's Scene system
+                <h2 class="feature-title">场景</h2>
+                使用Bevy的场景系统来创建, 保存, 加载ECS世界
                 <ul class="feature-sublist">
-                    <li><b>Loading</b>: Loading scenes preserves entity IDs (useful for save games)</li>
-                    <li><b>Instancing</b>: Instancing creates linked duplicates of scenes with new entity IDs</li>
-                    <li><b>Hot Reloading</b>: Changes to scene files are automatically applied to running apps</li>
+                    <li><b>加载</b>: 加载场景保存实体ID(对保存游戏很有用)</li>
+                    <li><b>实例化</b>: 实例化使用新的实体ID创建场景的链接副本</li>
+                    <li><b>热重载</b>: 对场景文件的更改会自动应用到正在运行的应用程序中</li>
                 </ul>
             </div>
             <div class="feature-image">
@@ -124,22 +121,22 @@
                 <img src="assets/sound.svg" class="feature-img" alt="Music notes"/>
             </div>
             <div class="feature-text">
-                <h2 class="feature-title">Sound</h2>
-                Load audio files and play them on demand
+                <h2 class="feature-title">声音</h2>
+                加载音频文件, 并按需求播放它们
                 <ul class="feature-sublist">
-                    <li>Load mp3 audio files as Assets</li>
-                    <li>Play audio files using the AudioOutput resource</li>
+                    <li>加载mp3音频文件作为资源</li>
+                    <li>使用 AudioOutput 来播放音频文件</li>
                 </ul>
             </div>
         </div>
         <div class="feature-container">
             <div class="feature-text">
-                <h2 class="feature-title">Hot Reloading</h2>
-                Get instant feedback on your changes without app restarts or recompiles
+                <h2 class="feature-title">热重载</h2>
+                在你修改之后得到即时反馈, 无需重启或者重新编译
                 <ul class="feature-sublist">
-                    <li>Asset changes are immediately reflected in running Bevy apps</li>
-                    <li>You can currently hot-reload scenes, textures, and meshes</li>
-                    <li>Any asset type can be integrated</li>
+                    <li>资源的变动将即时反映在运行的Bevy App中</li>
+                    <li>你可以热重载场景, 纹理和网格</li>
+                    <li>任何资源类型都可以</li>
                 </ul>
             </div>
             <div class="feature-image">
@@ -151,26 +148,24 @@
                 <img src="assets/progressbar.svg" class="feature-img" alt="Compile time progress bar"/>
             </div>
             <div class="feature-text">
-                <h2 class="feature-title">Productive Compile Times</h2>
-                Game development is an iterative process. You can't afford to wait for compiles
+                <h2 class="feature-title">高效的编译时间</h2>
+                游戏开发是一个迭代的过程. 你不用花时间去等待编译
                 <ul class="feature-sublist">
-                    <li>With Bevy you can expect 0.8-3.0 seconds with the "fast compiles" configuration</li>
-                    <li>Compare that to other popular Rust game engines, which can take over 30 seconds to compile a
-                        single
-                        newline insertion!</li>
+                    <li>使用Bevy的"快速编译"配置，您的预期为0.8-3.0秒</li>
+                    <li>与其他流行的Rust游戏引擎相比，它们可以花30秒以上的时间来编译一个单行插入!</li>
                 </ul>
             </div>
         </div>
         <div class="feature-container">
             <div class="feature-text">
-                <h2 class="feature-title">Free and Open Source</h2>
-                An engine made by and for the developer community
+                <h2 class="feature-title">免费开源</h2>
+                一个由(为)开发者社区制作的引擎
                 <ul class="feature-sublist">
-                    <li>100% free. Forever and always</li>
-                    <li>Open Source under the permissive MIT license</li>
-                    <li>No contracts</li>
-                    <li>No license fees</li>
-                    <li>No sales cuts</li>
+                    <li>100% 免费. 天长地久</li>
+                    <li>MIT许可证下的开放源码</li>
+                    <li>没有合同</li>
+                    <li>没有许可费用</li>
+                    <li>没有销售提成</li>
                 </ul>
             </div>
             <div class="feature-image">
@@ -179,11 +174,12 @@
         </div>
     </div>
     <div class="media-content features-whats-next">
-        Ready to start building Bevy apps? Get started fast with <a href="learn/book_cn/introduction/">The Bevy Book!</a>
+        准备好开始构建一个Bevy App了吗? 快速入门 <a href="learn/book_cn/introduction/">The Bevy 中文书!</a>
     </div>
     <img src="/assets/bevy_logo_dark.svg" class="bevy-logo-header" alt="Bevy logo"/>
     <div class="media-content features-sponsors">
-        <h3>A big thanks to Bevy's generous <a href="https://github.com/sponsors/cart/">Sponsors</a> for making our work sustainable:</h3>
+        <!-- <h3>A big thanks to Bevy's generous <a href="https://github.com/sponsors/cart/">Sponsors</a> for making our work sustainable:</h3> -->
+        <h3>非常感谢Bevy慷慨的<a href="https://github.com/sponsors/cart/">赞助者</a>让我们的工作能进行下去</h3>
         <h2>Platinum Sponsors</h2>
         <a href="https://www.embark-studios.com/"><img src="assets/embark.png" style="height: 6rem" alt="Embark Studios logo"/></a>
         <h2>Bronze Sponsors</h2>
