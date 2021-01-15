@@ -1,0 +1,283 @@
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Bevy - A data-driven game engine built in Rust " />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bevyengine-cn.github.io&#x2F;&#x2F;" />
+        <meta property="og:image" content="https://bevyengine-cn.github.io/assets/bevy_logo_fill.png" />
+        <meta property="og:description" content="Bevy is a refreshingly simple data-driven game engine built in Rust. It is free and open-source forever!" />
+        <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
+        <link rel="stylesheet" href="/site.css" />
+        <link href="/atom.xml" rel="alternate" type="application/atom+xml" />
+        <title>Bevy - A data-driven game engine built in Rust </title>
+         
+    </head>
+
+    <body>
+        <div class="headerbar-container">
+            <nav class="headerbar container">
+                <a href="/" class="header-logo">
+                    <img src="/assets/bevy_logo_dark.svg" class="logo" alt="bevy logo" />
+                </a>
+                
+                    <a href="/" class="header-logo-mobile">
+                        <img src="/assets/bevy_icon_dark.svg" class="logo" alt="bevy icon" />
+                    </a>
+                
+                <div class="header-item header-message">
+                    
+                        Features
+                    
+                </div>
+                <div class="header-item header-push"></div>
+                
+
+
+
+    
+
+
+<a href="&#x2F;" class="header-item header-item-active"  >
+    Features
+</a>
+
+                
+
+
+
+    
+
+
+<a href="&#x2F;learn" class="header-item" >
+    Learn
+</a>
+
+                
+
+
+
+    
+
+
+<a href="&#x2F;news" class="header-item" >
+    News
+</a>
+
+                
+
+
+
+    
+
+
+<a href="&#x2F;community" class="header-item" >
+    Community
+</a>
+
+                <a class="header-item header-button header-button-donate" href="https://github.com/sponsors/cart">Donate <img src="/assets/heart.svg" class="header-button-donate-heart" alt="heart icon"/></a>
+                <a class="header-item header-button" href="/learn/book_cn/getting-started/">Get Started</a>
+            </nav>
+        </div>
+        <section class="section">
+            <div class="container">
+                
+<div class="padded-content container">
+    <img src="/assets/bevy_logo_dark.svg" class="bevy-logo-header" alt="Bevy logo"/>
+    <div class="bevy-description">
+        一款由Rust语言构建且简单明了的数据驱动的游戏引擎
+        <br />
+        永远开源免费!
+    </div>
+    <div class="feature-list">
+        <div class="feature-container">
+            <div class="feature-text">
+                <h2 class="feature-title">数据驱动</h2>
+                <div class="feature-description">
+                    所有引擎和游戏逻辑使用Bevy ECS系统
+                    <ul class="feature-sublist">
+                        <li><b>快</b>: 大规模并行, 缓存友好. 根据某些基准测试最快的ECS</li>
+                        <li><b>简单</b>: 组件是Rust的结构体, 系统是Rust的函数</li>
+                        <li><b>给力</b>: 查询, 全局资源, 本地资源, 变化检测, 无锁并行调度</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="feature-image">
+                <img src="assets/ecs.svg" class="feature-img" style="margin-left: 10%; margin-right: auto;" alt="ECS code"/>
+            </div>
+
+        </div>
+        <div class="feature-container feature-container-reverse">
+            <div class="feature-image">
+                <img src="assets/sprite.png" class="feature-img" alt="Pixel art sprite of a person"/>
+            </div>
+            <div class="feature-text">
+                <h2 class="feature-title">2D 渲染</h2>
+                <div class="feature-description">
+                    为游戏和应用程序渲染实时2D图形
+                    <ul class="feature-sublist">
+                        <li><b>功能</b>: 精灵表, 动态纹理图集, 摄像机, 纹理和材质</li>
+                        <li><b>可扩展</b>: 自定义着色器, 材质, 和渲染管道</li>
+                        <li><b>通用核心</b>: 建立在Bevy的渲染图之上</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="feature-container">
+            <div class="feature-text">
+                <h2 class="feature-title">3D 渲染</h2>
+                一个现代和灵活的3D渲染器
+                <ul class="feature-sublist">
+                    <li><b>功能</b>: 灯光, 摄像机, 网格, 纹理, 材质, gltf加载</li>
+                    <li><b>可扩展</b>: 自定义着色器, 材质, 和渲染管道</li>
+                    <li><b>通用核心</b>: 建立在Bevy的渲染图之上</li>
+                </ul>
+            </div>
+            <div class="feature-image">
+                <img src="assets/boat.png" class="feature-img" style="max-height: 95%; max-width: 95%;" alt="3D boat model"/>
+            </div>
+        </div>
+        <div class="feature-container feature-container-reverse">
+            <div class="feature-image">
+                <img src="assets/render_graph.svg" class="feature-img" alt="图形渲染"/>
+            </div>
+            <div class="feature-text">
+                <h2 class="feature-title">图形渲染</h2>
+                使用图形结构组合自定义渲染管道
+                <ul class="feature-sublist">
+                    <li><b>并行</b>: 图形渲染是自动并行渲染的</li>
+                    <li><b>模块化</b>: 使用渲染图形节点构建可组合和可重用的渲染逻辑</li>
+                    <li><b>后端不可知</b>: 不绑定到特定的图形API</li>
+                </ul>
+            </div>
+        </div>
+        <div class="feature-container">
+            <div class="feature-text">
+                <h2 class="feature-title">跨平台</h2>
+                <div class="feature-description">
+                    支持所有主要的桌面平台:
+                    <ul class="feature-sublist">
+                        <li>Windows, MacOS, Linux</li>
+                    </ul>
+                    还有更多敬请期待:
+                    <ul class="feature-sublist">
+                        <li>Android, iOS, Web</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="feature-image">
+            <img src="assets/platform-icons.svg" class="feature-img" alt="Microsoft, Apple, and Linux logos"/>
+        </div>
+        <div class="feature-container feature-container-reverse">
+            <div class="feature-image">
+                <img src="assets/bevy_ui.svg" class="feature-img" alt="UI dialog window diagram"/>
+            </div>
+            <div class="feature-text">
+                <h2 class="feature-title">Bevy UI</h2>
+                一个定制的ecs驱动的UI框架, 专门为Bevy构建
+                <ul class="feature-sublist">
+                    <li>直接建立在Bevy的ECS，渲染器，和场景插件之上</li>
+                    <li>使用Bevy的场景格式声明或者在代码中动态的编写</li>
+                    <li>使用熟悉的"flex box"模型来布局你的UI</li>
+                </ul>
+            </div>
+        </div>
+        <div class="feature-container">
+            <div class="feature-text">
+                <h2 class="feature-title">场景</h2>
+                使用Bevy的场景系统来创建, 保存, 加载ECS世界
+                <ul class="feature-sublist">
+                    <li><b>加载</b>: 加载场景保存实体ID(对保存游戏很有用)</li>
+                    <li><b>实例化</b>: 实例化使用新的实体ID创建场景的链接副本</li>
+                    <li><b>热重载</b>: 对场景文件的更改会自动应用到正在运行的应用程序中</li>
+                </ul>
+            </div>
+            <div class="feature-image">
+                <img src="assets/scene.svg" class="feature-img" alt="2D scene of a square upon grass under the sun"/>
+            </div>
+        </div>
+        <div class="feature-container feature-container-reverse">
+            <div class="feature-image">
+                <img src="assets/sound.svg" class="feature-img" alt="Music notes"/>
+            </div>
+            <div class="feature-text">
+                <h2 class="feature-title">声音</h2>
+                加载音频文件, 并按需求播放它们
+                <ul class="feature-sublist">
+                    <li>加载mp3音频文件作为资源</li>
+                    <li>使用 AudioOutput 来播放音频文件</li>
+                </ul>
+            </div>
+        </div>
+        <div class="feature-container">
+            <div class="feature-text">
+                <h2 class="feature-title">热重载</h2>
+                在你修改之后得到即时反馈, 无需重启或者重新编译
+                <ul class="feature-sublist">
+                    <li>资源的变动将即时反映在运行的Bevy App中</li>
+                    <li>你可以热重载场景, 纹理和网格</li>
+                    <li>任何资源类型都可以</li>
+                </ul>
+            </div>
+            <div class="feature-image">
+                <img src="assets/hot_reloading.svg" class="feature-img" alt="Hot reloading diagram"/>
+            </div>
+        </div>
+        <div class="feature-container feature-container-reverse">
+            <div class="feature-image">
+                <img src="assets/progressbar.svg" class="feature-img" alt="Compile time progress bar"/>
+            </div>
+            <div class="feature-text">
+                <h2 class="feature-title">高效的编译时间</h2>
+                游戏开发是一个迭代的过程. 你不用花时间去等待编译
+                <ul class="feature-sublist">
+                    <li>使用Bevy的"快速编译"配置，您的预期为0.8-3.0秒</li>
+                    <li>与其他流行的Rust游戏引擎相比，它们可以花30秒以上的时间来编译一个单行插入!</li>
+                </ul>
+            </div>
+        </div>
+        <div class="feature-container">
+            <div class="feature-text">
+                <h2 class="feature-title">免费开源</h2>
+                一个由(为)开发者社区制作的引擎
+                <ul class="feature-sublist">
+                    <li>100% 免费. 天长地久</li>
+                    <li>MIT许可证下的开放源码</li>
+                    <li>没有合同</li>
+                    <li>没有许可费用</li>
+                    <li>没有销售提成</li>
+                </ul>
+            </div>
+            <div class="feature-image">
+                <img src="assets/opensource.svg" class="feature-img" alt="The open source icon"/>
+            </div>
+        </div>
+    </div>
+    <div class="media-content features-whats-next">
+        准备好开始构建一个Bevy App了吗? 快速入门 <a href="learn/book_cn/introduction/">The Bevy 中文书!</a>
+    </div>
+    <img src="/assets/bevy_logo_dark.svg" class="bevy-logo-header" alt="Bevy logo"/>
+    <div class="media-content features-sponsors">
+        <!-- <h3>A big thanks to Bevy's generous <a href="https://github.com/sponsors/cart/">Sponsors</a> for making our work sustainable:</h3> -->
+        <h3>非常感谢Bevy慷慨的<a href="https://github.com/sponsors/cart/">赞助者</a>让我们的工作能进行下去</h3>
+        <h2>Platinum Sponsors</h2>
+        <a href="https://www.embark-studios.com/"><img src="assets/embark.png" style="height: 6rem" alt="Embark Studios logo"/></a>
+        <h2>Bronze Sponsors</h2>
+        <a href="https://vertexstudio.co/"><img src="assets/vertex_studio.png" style="height: 4rem" alt="Vertex Studio logo"/></a>
+    </div>
+</div>
+
+            </div>
+        </section>
+    </body>
+</html>
