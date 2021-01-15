@@ -10,7 +10,7 @@ Bevy中的所有应用程序逻辑都使用实体(Entity)组件(Component)系统
 ECS是一种软件模式, 包括将程序分解为**实体(Entity)**, **组件(Component)**和**系统(System)**.  
 <span class="warning"> **实体(Entity)** 是指向一群 **组件(Component)** 的唯一 **事物(things)**, 然后使用 **系统(System)** 处理其过程.</span>
 
-例如, 一个实体可能有`位置(Position)`和`速度(Velocity)`组件, 而另一个实体可能有`位置(Position)`和`UI`组件. 系统是在一组特定组件上运行的逻辑. 你可能有一个在所以组件上带`位置(Position)`和`速度(Velocity)`组件的`运动`系统.
+例如, 一个实体可能有`位置(Position)`和`速度(Velocity)`组件, 而另一个实体可能有`位置(Position)`和`UI`组件. 系统是在一组特定组件上运行的逻辑. 你可能有一个运行在所有带有`位置(Position)`和`速度(Velocity)`组件的实体上的`移动`系统.
 
 ECS模式鼓励清晰, (解耦)分离的设计, 强制使你将数据和逻辑分解为核心组件. 通过优化内存访问模式并简化并行性, 有助于使你的代码更快.
 
