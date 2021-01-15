@@ -24,8 +24,10 @@ Bevy ECS是Bevy对ECS模式的实现. 不像其他需要复杂的生存期, 特�
     ```
 * **系统(Systems)**: 普通的Rust函数
     ```rs
-    fn print_position_system(position: &Position) {
-        println!("position: {} {}", position.x, position.y);
+    fn print_position_system(query: Query<&Transform>) {
+        for transform in query.iter() {
+            println!("position: {:?}", transform.translation);
+        }
     }
     ```
 * **实体(Entities)**: 包含唯一整数的简单类型
@@ -80,7 +82,7 @@ struct Name(String);
 当我们的应用启动时, 让我们通过{{rust_type(type="struct" crate="bevy_ecs" name="Commands")}}生产大量的实体到我们的世界({{rust_type(type="struct" crate="bevy_ecs" name="World")}})中.
 
 ```rs
-fn add_people(mut commands: Commands) {
+fn add_people(commands: &mut Commands) {
     commands
         .spawn((Person, Name("Elaina Proctor".to_string())))
         .spawn((Person, Name("Renzo Hume".to_string())))
@@ -102,10 +104,16 @@ fn main() {
 我们现在可以运行这个应用, `add_people`系统将会最先执行, 然后是`hello_world`. 但是我们新的`people`仍然无事可做! 让我们创建一个系统, 让我们的新公民向我们的世界({{rust_type(type="struct" crate="bevy_ecs" name="World")}})打招呼:
 
 ```rs
-fn greet_people(_person: &Person, name: &Name) {
-    println!("hello {}!", name.0);
+fn greet_people(query: Query<&Name, With<Person>>) {
+    for name in query.iter() {
+        println!("hello {}!", name.0);
+    }
 }
 ```
+
+我们传递给`system function`的参数定了系统运行的数据. 在本例中, `greet_people`将在所有带有`Person`和`Name`组件的实体上运行.
+
+你可以将上面的查询解释为: "遍历每一个拥有`Person`组件的`Name`组件"
 
 在我们的App中注册它:
 
@@ -118,8 +126,6 @@ fn main() {
         .run();
 }
 ```
-
-我们传递给`系统函数`的参数定义了系统运行在哪些实体上. 在这个例子中, `greet_people`将在所有拥有`Person`和`Name`组件的实体上运行.
 
 现在我们运行我们的App, 将会得到以下结果:
 

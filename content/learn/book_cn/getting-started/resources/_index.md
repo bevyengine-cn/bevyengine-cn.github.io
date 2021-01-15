@@ -22,12 +22,14 @@ page_template = "book-section.html"
 访问资源的方式与访问组件的方式基本相同. 你可以在你的系统中像这样访问`Time`资源:
 
 ```rs
-fn greet_people(time: Res<Time>, _person: &Person, name: &Name) {
-    println!("hello {}!", name.0);
+fn greet_people(time: Res<Time>, query: Query<&Name, With<Person>>) {
+    for name in query.iter() {
+        println!("hello {}!", name.0);
+    }
 }
 ```
 
-`Res`和`ResMut`指针分别提供对资源的读写. 请注意, 资源 **必须** 在组件之前, 否则你的函数将不能转换为系统. 实际上, 我建议你尝试把`time: Res<Time>`放置在无效的位置上, 这样你就可以知道`无效系统`编译错误是什么样子了.
+`Res`和`ResMut`指针分别提供对资源的读写.
 
 `Time`的`delta_seconds`字段给我们提供了上一次更新以来所经过的时间. 但是为了每2秒钟运行一次系统(system), 我们必须跟踪经过的一系列更新的时间. 为了简化过程, Bevy提供了`Timer`类型. 让我们创建一个新的资源(`Timer`), 来追踪经过的时间.
 
@@ -35,12 +37,14 @@ fn greet_people(time: Res<Time>, _person: &Person, name: &Name) {
 struct GreetTimer(Timer);
 
 fn greet_people(
-    time: Res<Time>, mut timer: ResMut<GreetTimer>, _person: &Person, name: &Name) {
+    time: Res<Time>, mut timer: ResMut<GreetTimer>, query: Query<&Name, With<Person>>) {
     // update our timer with the time elapsed since the last update
-    timer.0.tick(time.delta_seconds);
+    // if the timer hasn't finished yet, we return
+    if !timer.0.tick(time.delta_seconds()).just_finished() {
+        return;
+    }
 
-    // check to see if the timer has finished. if it has, print our message
-    if timer.0.finished {
+    for name in query.iter() {
         println!("hello {}!", name.0);
     }
 }
@@ -58,14 +62,4 @@ impl Plugin for HelloPlugin {
 }
 ```
 
-现在, `cargo run`运行一下, 他看上像那么回事, 但是不完全是!
-
-### The Bug
-
-好消息是我们没有了控制台的垃圾信息. 但是似乎我们在随机打印名字, 时间也不对. 这发生了什么?
-
-问题是该系统在每一个拥有`Person`和`Name`组件的实体上运行一次. 我们有3个实体满足这个条件, 所以在每一次刷新的时候, 我们刷新了3次计时器. 这有就意味着当一个计时器结束, 第一个要刷新的实体将重置`GreetTimer`, 而其他实体都不会打印他们的信息. 这意味着其他2个人没有机会打招呼. 这太没礼貌了!
-
-我们需要一种方式让我们的系统(System)在每一次刷新的时候运行一次. 但不是计时器(`Timer`)结束的时候和每一个人打招呼. 幸运的是Bevy ECS为此提供了"查询"(`Queries`)
-
-让我们继续下一章, 以便我们解决这个讨厌的Bug!
+现在, `cargo run`这个App, 它将以比较合理的方式向人们打招呼.

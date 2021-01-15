@@ -37,7 +37,7 @@ Bevy可以作为一个库在[crates.io](https://crates.io/crates/bevy)中获取.
 
 ```toml
 [dependencies]
-bevy = "0.3" # make sure this is the latest version
+bevy = "0.4" # make sure this is the latest version
 ```
 
 目前`Bevy`库的版本: 

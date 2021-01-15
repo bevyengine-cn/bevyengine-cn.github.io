@@ -71,19 +71,23 @@ edition = "2018"
 
 ### Enable Fast Compiles (Optional)
 
-Bevy can be built just fine using default configuration on stable Rust. However for really fast iterative compiles, we recommend the following configuration:
+Bevy can be built just fine using default configuration on stable Rust. However for maximally fast iterative compiles, we recommend the following configuration:
 
+* **Enable Bevy's Dynamic Linking Feature**: This is the biggest iterative compilation time win and requires no special setup. When you have `bevy` as a dependency you can run your app with dynamic linking like this:
+    ```bash
+    cargo run --features bevy/dynamic
+    ```
 * **LLD linker**: The Rust compiler spends a lot of time in the "link" step. LLD is _much faster_ at linking than the default Rust linker. To install LLD, find your OS below and run the given command:
     * **Ubuntu**: `sudo apt-get install lld`
     * **Arch**: `sudo pacman -S lld`
     * **Windows**: Ensure you have the latest [cargo-binutils](https://github.com/rust-embedded/cargo-binutils)
-        ```
+        ```bash
         cargo install -f cargo-binutils
         rustup component add llvm-tools-preview
         ```
     * **MacOS**: Modern LLD does not yet support MacOS, but we can use zld instead: `brew install michaeleisel/zld/zld`
 * **Nightly Rust Compiler**: This gives access to the latest performance improvements and "unstable" optimizations
-    ```
+    ```bash
     # Install the nightly toolchain
     rustup toolchain install nightly
     # Configure your current project to use nightly (run this command within the project)
@@ -108,7 +112,7 @@ authors = ["You <you@veryrealemail.com>"]
 edition = "2018"
 
 [dependencies]
-bevy = "0.3" # make sure this is the latest version
+bevy = "0.4" # make sure this is the latest version
 ```
 
 再次执行```cargo run```. Bevy依赖项开始构建. 这需要一点时间, 因为你实际上是从头构建引擎. 你只需要进行一次完整的构建. 以后每次都会很快的!
