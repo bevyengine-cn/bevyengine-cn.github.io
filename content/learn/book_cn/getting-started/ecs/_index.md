@@ -94,7 +94,7 @@ fn add_people(commands: &mut Commands) {
 
 ```rs
 fn main() {
-    App::build()
+    App::new()
         .add_startup_system(add_people.system())
         .add_system(hello_world.system())
         .run();
@@ -119,7 +119,7 @@ fn greet_people(query: Query<&Name, With<Person>>) {
 
 ```rs
 fn main() {
-    App::build()
+    App::new()
         .add_startup_system(add_people.system())
         .add_system(hello_world.system())
         .add_system(greet_people.system())
