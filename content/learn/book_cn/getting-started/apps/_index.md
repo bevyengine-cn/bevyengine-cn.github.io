@@ -12,7 +12,7 @@ Bevy程序看起来像{{rust_type(type="struct", crate="bevy_app", name="App", n
 use bevy::prelude::*;
 
 fn main() {
-    App::build().run();
+    App::new().run();
 }
 ```
 
